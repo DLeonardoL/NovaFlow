@@ -2,7 +2,7 @@ from config import workbench_db as mydb
 from models import *
 
 regiones = [
-    [1, "Norteamérica", "NA", "Incluye EE.UU., Canadá y territorios asociados", True],
+    [1, "Norteamérica", "Incluye EE.UU.", "Canadá y territorios asociados", True],
     [2, "América Latina y el Caribe", "LATAM", "Desde México hasta Sudamérica y el Caribe", True],
     [3, "Europa Occidental", "EUW", "Incluye países como Francia, Alemania, España, etc.", True],
     [4, "Europa Oriental", "EUE", "Países del este europeo y el área del Báltico", True],
@@ -16,9 +16,9 @@ regiones = [
     [12, "Oceanía", "OC", "Incluye Australia, Nueva Zelanda y el Pacífico Sur", True]
 ]
 
-for r in regiones:
-    new_region = Regiones(r[1], r[2], r[3], r[4], r[5])
-    new_region.create()
+# for r in regiones:
+#     new_region = Regiones(r[1], r[2], r[3], r[4])
+#     new_region.create()
 
 subregiones = [
     [1, "Estados Unidos", "USA", "Estados Unidos continental y territorios", 1, True],
@@ -46,9 +46,9 @@ subregiones = [
     [23, "Australia y Nueva Zelanda", "AUNZ", "Australia y Nueva Zelanda", 12, True]
 ]
 
-for r in subregiones:
-    new_region = Subregiones(r[1], r[2], r[3], r[4], r[5])
-    new_region.create()
+# for r in subregiones:
+#     new_region = Subregiones(r[1], r[2], r[3], r[4], r[5])
+#     new_region.create()
 
 segmentacion = [
     [1, 'A', None],

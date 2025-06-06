@@ -365,19 +365,18 @@ class Subregiones:
 
 class Regiones:
 
-    def __init__(self, nombre, codigo, descripcion, id_region, activo):
+    def __init__(self, nombre, codigo, descripcion, activo):
         self.nombre = nombre
         self.codigo = codigo
         self.descripcion = descripcion
-        self.id_region = id_region
         self.activo = activo
 
     def create(self):
         conn = mydb('nova_flow')
         mycursor = conn.cursor()
 
-        query = 'INSERT INTO regiones (nombre, codigo, descripcion, id_region, activo) VALUES(%s, %s, %s, %s, %s)'
-        values = (self.nombre, self.codigo, self.descripcion, self.id_region, self.activo)
+        query = 'INSERT INTO regiones (nombre, codigo, descripcion, activo) VALUES(%s, %s, %s, %s)'
+        values = (self.nombre, self.codigo, self.descripcion, self.activo)
 
         mycursor.execute(query, values)
         conn.commit()
@@ -1186,7 +1185,7 @@ class Cuentas:
 class Segmentacion:
 
     def __init__(self, clasificacion, descripcion):
-        self.claseificaicon = clasificacion
+        self.clasificacion = clasificacion
         self.descripcion = descripcion
 
     def create(self):
@@ -1194,7 +1193,7 @@ class Segmentacion:
         mycursor = conn.cursor()
 
         query = "INSERT INTO segmentacion (clasificacion, descripcion) VALUES(%s, %s);"
-        values = (self.clasificaicon, self.descripcion)
+        values = (self.clasificacion, self.descripcion)
 
         mycursor.execute(query, values)
         conn.commit()

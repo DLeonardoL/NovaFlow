@@ -54,7 +54,7 @@ CREATE TABLE nova_flow.`industrias` (
   `nota` text
 );
 
-CREATE TABLE nova_flow.`usuario` (
+CREATE TABLE nova_flow.`usuarios` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `nombre` varchar(255),
   `id_organizacion` int,
