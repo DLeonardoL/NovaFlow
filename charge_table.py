@@ -56,9 +56,9 @@ segmentacion = [
     [3, 'C', None],
 ]
 
-for r in segmentacion:
-    new_region = Segmentacion(r[1], r[2])
-    new_region.create()
+# for r in segmentacion:
+#     new_region = Segmentacion(r[1], r[2])
+#     new_region.create()
 
 roles = [
     [1, 'Aliado'],
@@ -68,9 +68,9 @@ roles = [
     [5, 'Empleado'],
 ]
 
-for r in roles:
-    new_region = Roles(r[1])
-    new_region.create()
+# for r in roles:
+#     new_region = Roles(r[1])
+#     new_region.create()
 
 industrias = [
     [1, "Agricultura, silvicultura y pesca", "Sector Primario", "Sector Primario", "Sector Primario"],
@@ -102,9 +102,9 @@ industrias = [
     [41, "Freelance o Multisector", "Freelance", "Multisector", "Otros"]
 ]
 
-for r in industrias:
-    new_region = Industrias(r[1], r[2], r[3], r[4])
-    new_region.create()
+# for r in industrias:
+#     new_region = Industrias(r[1], r[2], r[3], r[4])
+#     new_region.create()
 
 # Crear usuario
 nuevo_usuario = Usuario('gestor1', 1, 1, 'gestor1', 'password', 2, 'activo', None)
